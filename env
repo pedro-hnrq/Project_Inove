@@ -1,0 +1,15 @@
+#SECRET KEY
+SECRET_KEY=django-insecure-4cb&j6(#5@)zgo0gg5ldffn27w26j@8i%j1(c0*^&l&ems8jbz
+
+#Change DEBUG to False in Production
+DEBUG=True 
+
+DOMAIN=127.0.0.1:8000
+
+#DATABASE POSTGRESQL
+DB_POSTGRES_ENGINE=django.db.backends.postgresql
+DB_POSTGRES_DB=inove
+DB_POSTGRES_USER=dev
+DB_POSTGRES_PASSWORD=dev@pg
+DB_POSTGRES_HOST=db
+DB_POSTGRES_PORT=5432
