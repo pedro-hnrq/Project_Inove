@@ -5,8 +5,9 @@
 <a href="#-prévia">Prévia</a>&nbsp;&nbsp;&nbsp;|&nbsp;&nbsp;&nbsp;
   <a href="#-objetivo">Objetivo</a>&nbsp;&nbsp;&nbsp;|&nbsp;&nbsp;&nbsp;
   <a href="#️-instalação">Instalação</a>&nbsp;&nbsp;&nbsp;|&nbsp;&nbsp;&nbsp;
+  <a href="#-commands">Importação Json</a>&nbsp;&nbsp;&nbsp;|&nbsp;&nbsp;&nbsp;
   <a href="#-dbeaver">Banco de Dados</a>&nbsp;&nbsp;&nbsp;|&nbsp;&nbsp;&nbsp;
-  <a href="#-postman--thunder-client">Endpoints</a>&nbsp;&nbsp;&nbsp;|&nbsp;&nbsp;&nbsp;
+  <a href="#-swagger--django-rest-framework---drf--thunder-client">Endpoints</a>&nbsp;&nbsp;&nbsp;|&nbsp;&nbsp;&nbsp;
   <a href="#-conclusão">Conclusão</a>&nbsp;&nbsp;&nbsp;|&nbsp;&nbsp;&nbsp;
   <a href="#-autor">Autor</a>
 </p>
@@ -37,6 +38,7 @@ Antes de começar, verifique se você atendeu aos seguintes requisitos:
 
 - Python 
 - Django 
+- Django REST Framework
 - GIT 
 - PostgreSQL
 - Docker
@@ -132,10 +134,27 @@ docker compose up -d
 docker compose up -d db
 ```
 
+Obs.: Para que o contêiner PostgreSQL funcione juntamente com sua máquina local, poderá ajustar a configuração no arquivo `.env`. Altere o valor da variável `DB_POSTGRES_HOST` para _localhost_. Isso permitirá que o contêiner do banco de dados seja iniciado com o comando acima. Após inicializar o contêiner, você pode rodar o projeto na sua máquina local, utilizando a configuração ajustada.
 
 Para poder **Parar** a aplicação no docker basta executar
 ```bash
 docker compose down
+```
+
+#### 🌐 Commands
+
+Para puxar todas informações Json do site [{JSON} Placeholder](https://jsonplaceholder.typicode.com/) o Post e User, utilize o comando: 
+
+- Para capturar todas informações:
+
+```
+python manage.py import_json
+```
+
+- Seleciona a quantidade de informação:
+
+```
+python manage.py import_json --users 5 
 ```
 
 #### 🦫 Dbeaver
@@ -148,13 +167,28 @@ Para visualizar as as tabelas no banco de dados, poderá usar o `DBeaver Communt
 - Nome de usuário: dev
 - Senha: dev@pg
 
-#### 👨🏻‍🚀 Postman | Thunder Client
+#### 👨🏻‍🚀 Swagger | Django REST Framework - DRF | Thunder Client
 
-Poderá utilizar tanto o `Postman` ou a aplicação que tem no Visual Studio Code, conhecido como `Thunder Client`, para realizar as requisições do Endpoints.
+Acesse os endpoints da API:
+
+- Swagger e Redoc:
+  - localhost:8000/api/swagger
+  - localhost:8000/api/redoc
+
+- DRF(Estando logando conseguer realizar as requisições):
+  - localhost:8000/api/users
+  - localhost:8000/api/users/7
+  - localhost:8000/api/posts/41
+
+- Thunder Client (Tem que ter o Token para realizar os requisiçãos endpoint):
+  - PUT: localhost:8000/api/posts/15
+  - DELETE: localhost:8000/api/posts/100
+
+Para autenticação via Swagger ou Thunder Client, clique em "Authorize" e insira o token.
 
 #### 📓 Conclusão
 
-<h5 align="justify">Através do desenvolvimento do Projeto Inove API, foi possível integrar uma aplicação Django REST Framework com uma API externa, realizando operações CRUD em posts e usuários. Além disso, a aplicação conseguiu armazenar e manipular dados em um banco de dados PostgreSQL, demonstrando a capacidade de integração e persistência de dados. </h5>
+<h5 align="justify">O Projeto Inove API integra uma aplicação Django REST Framework com uma API externa, realizando operações CRUD em posts e usuários e armazenando dados em um banco de dados PostgreSQL. </h5>
 
 
 ### 💡 Autor 

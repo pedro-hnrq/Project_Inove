@@ -35,11 +35,14 @@ INSTALLED_APPS = [
     #My_APPs
     'account',
     'forum',
+    'information',
     'core',
 
     #Ext_APPs
     'rest_framework',
     'django_filters',
+    'drf_spectacular',
+    'rest_framework.authtoken',
 ]
 
 MIDDLEWARE = [
@@ -130,14 +133,24 @@ MEDIA_ROOT = os.path.join(BASE_DIR, 'media')
 
 # Django REST Framework - DRF
 REST_FRAMEWORK = {
+    # YOUR SETTINGS
+    'DEFAULT_SCHEMA_CLASS': 'drf_spectacular.openapi.AutoSchema',
+    #GUIA DE AUTENTICAÇÕES  (Session ou token)
     'DEFAULT_AUTHENTICATION_CLASSES':(
         'rest_framework.authentication.SessionAuthentication',
         'rest_framework.authentication.TokenAuthentication',
     ),
-    
+    #GUIA DE to
     'DEFAULT_PERMISSION_CLASSES': (
         'rest_framework.permissions.IsAuthenticatedOrReadOnly',
-    )
+    ),
+}
+SPECTACULAR_SETTINGS = {
+    'TITLE': 'Project Inove API',
+    'DESCRIPTION': '<-- Projeto User (GET e POST) e Post (CRUD) -->',
+    'VERSION': '1.0.0',
+    'SERVE_INCLUDE_SCHEMA': False,
+    # OTHER SETTINGS
 }
 
 # Default primary key field type
