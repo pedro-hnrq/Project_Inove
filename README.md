@@ -14,14 +14,22 @@
 
 <div align="center">
 
-<img alt="GitHub Language Count" src="https://img.shields.io/github/languages/count/pedro-hnrq/Proj_ReddFlow" />
-
+<img alt="GitHub Language Count" src="https://img.shields.io/github/languages/count/pedro-hnrq/Project_Inove" />
+<img alt="GitHub Top Language" src="https://img.shields.io/github/languages/top/pedro-hnrq/Project_Inove" />
+<img alt="" src="https://img.shields.io/github/repo-size/pedro-hnrq/Project_Inove" />
+<img alt="GitHub Issues" src="https://img.shields.io/github/issues/pedro-hnrq/Project_Inove" />
+<img alt="GitHub Closed Pull Requests" src="https://img.shields.io/github/issues-pr-closed/pedro-hnrq/Project_Inove" />
+<img alt="GitHub Contributors" src="https://img.shields.io/github/contributors/pedro-hnrq/Project_Inove" />
+<img alt="Github License" src="https://img.shields.io/github/license/pedro-hnrq/Project_Inove" />
 
 </div>
 
 
 
 ### 📷 Prévia
+
+![inove](https://github.com/user-attachments/assets/301203e8-0d63-45d0-9404-755ee4ea5080)
+
 
 
 
